@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="sideBarColor fixed-top">
+          <div class=" px-3 pt-2">
+            <span class="sidebarMainLink">BROWSE</span>
+            <div *ngIf="sideBarMenutop" class="test">
+                <ul *ngFor="let list of sideBarMenutop" class="nav">
+                  <li class="navLink"><a class="nav-link navLink" routerLink={{list.url}}>{{list.name}}</a></li>
+                </ul>
+            </div>
+            <span class="sidebarMainLink">LIBRARY</span>
+            <div *ngIf="sideBarBootom">
+              <ul *ngFor="let list of sideBarBootom" class="nav">
+                <li class="nav-link navLink">
+                  <i class="{{list.icon}}" routerLink={{list.url}}></i><span class="ms-1" routerLink={{list.url}}>{{list.name}}</span>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <!-- <button class="playlist btn btn-dark ms-lg-5"><i class="fs-5 bi-plus"></i>Playlist</button> -->
+          </div>
+      </div>
+      <div class="col py-3" style="margin-left: 250px; margin-top:70px;">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

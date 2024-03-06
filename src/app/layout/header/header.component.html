@@ -1,0 +1,63 @@
+<nav class="navbar fixed-top navbar-expand-lg topBar">
+  <div class="container-fluid mx-3">
+      <img class="me-3" style="height: 45px;" src="assets/logo.png">
+      <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mb-2 mb-lg-0" *ngFor="let data of topBarNavLink">
+        <li class="nav-item"><a class="navLink nav-link" href="#">{{data}}</a></li>
+      </ul>
+      <div class=" mx-auto w-50 ">
+          <input class="form-control border-end-0 border rounded-pill" placeholder="Search" type="search"  style="text-align: center;">
+      </div>
+      <ul class="navbar-nav  mb-2 mb-lg-0 ">
+          <li class="nav-item"><a class="navLink nav-link" aria-current="page" href="#">Music Languages</a></li>
+          <li class="nav-item"><a class="navLink nav-link" routerLink="login">Log In</a></li>
+          <li class="nav-item"><a class="navLink nav-link" href="#">Sign Up</a></li>
+      </ul>
+      </div>
+      <div>
+        <!-- <app-light-dark-mode></app-light-dark-mode> -->
+      </div>
+      <!-- <div class="dropdown pb-4">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+            <span class="d-none d-sm-inline mx-1">loser</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div> -->
+  </div>
+</nav>
+
+
+
+<!-- <nav class="navbar fixed-top navbar-expand-lg" style="background-color:  #f2f2f2;;">
+<div class="container">
+    <a class="navbar-brand" href="#"><img src="n-img/logo.png" class="img-responsive"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="n-index.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Chi Siamo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Dove Siamo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav> -->

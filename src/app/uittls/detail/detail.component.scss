@@ -1,0 +1,115 @@
+.main{
+  margin-bottom: 80px;
+}
+.loading{
+  background-color: #f2f2f2;
+  height: 100vh;
+  padding: 20% 40%;
+  // display: flex;
+  .loader{
+    color: #76B713;
+    height: 80px;
+    width: 80px;
+  }
+
+}
+.artistsDetail{
+  display: flex;
+}
+.artistsData{
+  margin: 30px 20px 0px 20px;
+  padding-top: 45px;
+}
+.image{
+  border-radius: 50%;
+  height: 250px;
+  margin: 30px;
+}
+.name{
+  font-size: 40px;
+  font-weight: 600;
+  font-family: emoji;
+  // padding: 20px;
+}
+.buttons{
+  display: flex;
+}
+.palyButton{
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid #f2f2f2;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  color: #76B713;
+}
+.circle-container {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 25px;
+  padding: 3px;
+  width: 50px;
+  text-align: center;
+  color: #76B713;
+  background-color: #f2f2f2;;
+  border: 2px solid #f2f2f2;;
+  border-radius: 50%; /* Make the heart icon circular */
+  transition: border-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+.icon:hover,.palyButton:hover {
+  border-color: gray;
+}
+
+
+// song list css
+.songList{
+  background-color: #f2f2f2;;
+}
+
+.song-container {
+  position: relative;
+  display: inline-block;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: url('https://www.freepnglogos.com/uploads/play-button-png/index-media-cover-art-play-button-overlay-5.png') center/cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.song-container:hover .play-icon {
+  opacity: 1;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 5px;
+}
+
+.hide{
+  display: none;
+}
+
+//loadMore button
+.loadMore{
+  width: 100%;
+  background-color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 600;
+  color: #76B713;
+  // border-radius: 25px;
+  border: 2px solid #f2f2f2;
+}
+.loadMore:hover{
+  // background-color: gray;
+  border-color: gray;
+}
+
+
+

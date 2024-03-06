@@ -1,0 +1,18 @@
+<div class="row mainDiv">
+  <div class="col-3" *ngFor="let data of chartsData">
+    <div class="product-grid container">
+      <div class="" *ngIf="data.image[2].link">
+        <div href="#" class="test">
+            <img class="pic-1 image" [src]="data.image[2].link">
+        </div>
+
+        <div class="icon">
+          <i class="bi-play-fill playIcon"></i>
+        </div>
+      </div>
+      <div class="product-content">
+        <span *ngIf="data.title" class="title">{{data.title}}</span>
+      </div>
+    </div>
+  </div>
+</div>

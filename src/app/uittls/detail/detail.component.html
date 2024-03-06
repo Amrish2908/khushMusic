@@ -1,0 +1,132 @@
+<div *ngIf="songData.length > 0">
+  <div class="loading" *ngIf="!artistsData&&songData&&songId">
+    <app-loader></app-loader>
+  </div>
+
+  <div *ngIf="artistsData&&songData&&songId" class="main">
+    <div class="artistsDetail">
+      <div class="imageDiv">
+        <img class="image" [src]="artistsData?.image[2].link">
+      </div>
+      <div class="artistsData">
+        <div class="name">{{artistsData?.name}}</div>
+        <div class="fanCount mb-4">Artist: {{artistsData?.fanCount}} FanCount</div>
+        <div>
+          <div class="buttons">
+            <button class="palyButton px-5 py-2 btn">Play</button>
+            <div class="circle-container"><i class="bi bi-heart-fill icon mx-3" aria-hidden="true"></i></div>
+            <div class="circle-container"><i class="bi bi-three-dots icon" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngFor="let song of songData,let i =index ">
+      <table class="table table-striped">
+        <tbody>
+          <tr style="box-shadow: 0px 4px 20px -17px #76B713;">
+            <td class="col-1">
+              <span class="me-4 ms-3">{{i+1}}</span>
+              <div class="song-container" (click)="setSongData(song.downloadUrl[4].link)">
+                <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage"
+                  [src]='song.image[1].link' alt="img">
+                <div class="play-icon"></div>
+              </div>
+            </td>
+            <td class="col-2">{{song.album.name}}</td>
+            <td class="col-4" style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              {{song.primaryArtists}}</td>
+            <th class="col-1" style="text-align: center;">
+              <i [ngClass]="status ? 'hide' : 'show'" (click)="songLike()" class="bi bi-heart mx-3"
+                aria-hidden="true"></i>
+              <i [ngClass]="status ? 'show' : 'hide'" (click)="songLike()" class="bi bi-heart-fill mx-3"
+                aria-hidden="true"></i>
+              <i class="bi bi-three-dots mx-3" aria-hidden="true"></i>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="lastPage == false">
+      <button type="button" class="btn loadMore" (click)="getArtistsSong(songId,pageNumber+1)">Load more</button>
+
+    </div>
+    <!-- <nav aria-label="...">
+     <ul class="pagination">
+
+       <li class="page-item">
+         <a class="page-link" (click)="getArtistsSong(songId,pageNumber+1)">Next</a>
+       </li>
+     </ul>
+   </nav> -->
+  </div>
+
+</div>
+
+
+<div *ngIf="songList.length > 0">
+  <div class="loading" *ngIf="!artistsData&&songData&&songId">
+    <app-loader></app-loader>
+  </div>
+
+  <div *ngIf="artistsData&&songData&&songId" class="main">
+    <div class="artistsDetail">
+      <div class="imageDiv">
+        <img class="image" [src]="artistsData?.image[2].link">
+      </div>
+      <div class="artistsData">
+        <div class="name">{{artistsData?.name}}</div>
+        <div class="fanCount mb-4">Artist: {{artistsData?.fanCount}} FanCount</div>
+        <div>
+          <div class="buttons">
+            <button class="palyButton px-5 py-2 btn">Play</button>
+            <div class="circle-container"><i class="bi bi-heart-fill icon mx-3" aria-hidden="true"></i></div>
+            <div class="circle-container"><i class="bi bi-three-dots icon" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngFor="let song of songList,let i =index ">
+      <table class="table table-striped">
+        <tbody>
+          <tr style="box-shadow: 0px 4px 20px -17px #76B713;">
+            <td class="col-1">
+              <span class="me-4 ms-3">{{i+1}}</span>
+              <div class="song-container" (click)="setSongData(song.downloadUrl[4].link)">
+                <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage"
+                  [src]='song.image[1].link' alt="img">
+                <div class="play-icon"></div>
+              </div>
+            </td>
+            <td class="col-2">{{song.album.name}}</td>
+            <td class="col-4" style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              {{song.primaryArtists}}</td>
+            <th class="col-1" style="text-align: center;">
+              <i [ngClass]="status ? 'hide' : 'show'" (click)="songLike()" class="bi bi-heart mx-3"
+                aria-hidden="true"></i>
+              <i [ngClass]="status ? 'show' : 'hide'" (click)="songLike()" class="bi bi-heart-fill mx-3"
+                aria-hidden="true"></i>
+              <i class="bi bi-three-dots mx-3" aria-hidden="true"></i>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="lastPage == false">
+      <button type="button" class="btn loadMore" (click)="getArtistsSong(songId,pageNumber+1)">Load more</button>
+
+    </div>
+    <!-- <nav aria-label="...">
+     <ul class="pagination">
+
+       <li class="page-item">
+         <a class="page-link" (click)="getArtistsSong(songId,pageNumber+1)">Next</a>
+       </li>
+     </ul>
+   </nav> -->
+  </div>
+
+</div>

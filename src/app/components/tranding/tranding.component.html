@@ -1,0 +1,44 @@
+<div *ngIf="trendingAlbum.length > 0">
+  <div class="trending"> Trending Album</div>
+  <div class="row mainDiv">
+    <div class="cards" *ngFor="let data of trendingAlbum">
+      <div class="product-grid container">
+        <div class="" *ngIf="data.image[2].link">
+          <a href="#" class="image">
+            <img class="pic-1 image" [src]="data.image[2].link">
+          </a>
+          <div class="icon">
+            <i class="bi-play-fill playIcon"></i>
+          </div>
+        </div>
+        <div class="product-content">
+          <span *ngIf="data?.name" class="title">{{data.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div *ngIf="trendingSong.length > 0">
+  <div class="trending">Trending Song </div>
+  <div class="row mainDiv">
+    <div class="cards" *ngFor="let data of trendingSong">
+      <div class="product-grid container">
+        <div class="" *ngIf="data.image[2].link">
+          <a href="#" class="image">
+            <img class="pic-1 image" [src]="data.image[2].link">
+          </a>
+          <div class="icon">
+            <i class="bi-play-fill playIcon"></i>
+          </div>
+        </div>
+        <div class="product-content">
+          <span *ngIf="data?.name" class="title">{{data.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

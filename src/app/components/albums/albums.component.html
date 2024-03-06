@@ -1,0 +1,21 @@
+<div class="row mainDiv">
+  <div class="cards" *ngFor="let data of albumData">
+    <div class="product-grid container">
+      <div class="" *ngIf="data.image[2].link">
+        <div (click)="setId(data.id)"  routerLink="artist">
+          <a class="image">
+            <img class="pic-1 image" [src]="data.image[2].link">
+          </a>
+          <div class="icon">
+            <i class="bi-play-fill playIcon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="product-content">
+        <span *ngIf="data.name" class="title">{{data.name}}</span>
+        {{data.id}}
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

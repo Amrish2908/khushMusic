@@ -1,0 +1,50 @@
+<!-- <div class="row mainDiv">
+  <div class="col-2 " *ngFor="let data of testdata">
+      <div class="product-grid">
+          <div class="product-image"  *ngIf="data.image[2].link">
+              <a href="#" class="image">
+                  <img class="pic-1" [src]="data.image[2].link">
+              </a>
+              <div>
+                <ul class="product-links" style=" top: 50%; left: 50%;transform: translateX(-50%) translateY(-50%);">
+                  <li><a class="test1" href="#"><i class="bi-play-fill"></i></a></li>
+              </ul>
+              <ul class="product-links" style=" right: 10px; bottom: 0;">
+                  <li><a class="test2" href="#"><i class="bi-three-dots"></i></a></li>
+              </ul>
+              <ul class="product-links" style="left: 10px; bottom: 0;">
+                  <li><a  class="test3" href="#"><i class="bi-suit-heart-fill"></i></a></li>
+              </ul>
+              </div>
+          </div>
+          <div class="product-content">
+              <h3 class="title">{{data.name}}</h3>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+<div class="row mainDiv">
+  <div class="cards" *ngFor="let data of playlists">
+    <div class="product-grid container">
+      <div class="" *ngIf="data.image[2].link">
+        <a class="image">
+          <img class="pic-1 image" [src]="data.image[2].link">
+        </a>
+        <div class="icon">
+          <i (click)="setId(data.id)" routerLink="/detail" class="bi-play-fill playIcon"></i>
+        </div>
+      </div>
+      <div class="product-content">
+        <div>
+          <span *ngIf="data.title" class="title">{{data.title}}</span>
+          <!-- <span class="title">followerCount</span> -->
+        </div>
+        <p *ngIf="data.followerCount" class="follwers" style="margin-top:-5px;">{{data.followerCount | abbreviateNumber}} Follwers</p>
+      </div>
+      <!-- <button  >{{data.id}}</button> -->
+
+    </div>
+  </div>
+</div>

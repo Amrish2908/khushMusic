@@ -1,0 +1,39 @@
+<!-- <div class="row mainDiv">
+  <div class="cards" *ngFor="let data of artistsData">
+    <div class="product-grid">
+      <div class="container" *ngIf="data.image[2].link">
+        <a href="#" class="image">
+          <img class="pic-1 image" [src]="data.image[2].link">
+        </a>
+        <div class="icon">
+          <i class="bi-play-fill playIcon"></i>
+        </div>
+        <div class="product-content">
+          <h3 class="title">{{data.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="loading" *ngIf="!allArtistsDetail">
+  <app-loader></app-loader>
+</div>
+<div class="row mainDiv" *ngIf="allArtistsDetail.length > 0">
+  <div class="cards" *ngFor="let data of allArtistsDetail">
+    <div class="product-grid">
+      <div class="container" *ngIf="data.image[2].link">
+        <a href="#" class="image">
+          <img class="pic-1 image" [src]="data.image[2].link">
+        </a>
+        <div class="icon" (click)="setArtistsId(data.id)" routerLink="/detail">
+          <i class="bi-play-fill playIcon"></i>
+        </div>
+        <div class="product-content">
+          <h3 class="title">{{data.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
