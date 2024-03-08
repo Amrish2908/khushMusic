@@ -24,11 +24,7 @@ export class CommanService {
 
 
 
-  // getLoginData(): Observable<any>{
-  //   return this.http.get('./json/login.json')
-  //     .map((result: Response) => result.json())
-  //     .catch(this.getError);
-  // }
+
   getData(): Observable<any> {
     return this.http.get<any[]>(`${API_URL}/modules?language=hindi,english`);
   }

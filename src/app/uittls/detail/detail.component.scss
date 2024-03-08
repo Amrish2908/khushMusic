@@ -1,40 +1,45 @@
-.main{
+.main {
   margin-bottom: 80px;
 }
-.loading{
+
+.loading {
   background-color: #f2f2f2;
   height: 100vh;
   padding: 20% 40%;
-  // display: flex;
-  .loader{
+
+  .loader {
     color: #76B713;
     height: 80px;
     width: 80px;
   }
-
 }
-.artistsDetail{
+
+.artistsDetail {
   display: flex;
 }
-.artistsData{
+
+.artistsData {
   margin: 30px 20px 0px 20px;
   padding-top: 45px;
 }
-.image{
+
+.image {
   border-radius: 50%;
   height: 250px;
   margin: 30px;
 }
-.name{
+
+.name {
   font-size: 40px;
   font-weight: 600;
   font-family: emoji;
-  // padding: 20px;
 }
-.buttons{
+
+.buttons {
   display: flex;
 }
-.palyButton{
+
+.palyButton {
   font-size: 20px;
   font-weight: 600;
   border: 2px solid #f2f2f2;
@@ -42,31 +47,34 @@
   border-radius: 25px;
   color: #76B713;
 }
+
 .circle-container {
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .icon {
   font-size: 25px;
   padding: 3px;
   width: 50px;
   text-align: center;
   color: #76B713;
-  background-color: #f2f2f2;;
-  border: 2px solid #f2f2f2;;
-  border-radius: 50%; /* Make the heart icon circular */
-  transition: border-color 0.3s ease; /* Optional: Add a smooth transition effect */
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  border-radius: 50%;  /* Make the heart icon circular */
+  transition: border-color 0.3s ease;  /* Optional: Add a smooth transition effect */
 }
-.icon:hover,.palyButton:hover {
+
+.icon:hover,
+.palyButton:hover {
   border-color: gray;
 }
 
-
 // song list css
-.songList{
-  background-color: #f2f2f2;;
+.songList {
+  background-color: #f2f2f2;
 }
 
 .song-container {
@@ -92,24 +100,20 @@
   border-radius: 5px;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
 //loadMore button
-.loadMore{
+.loadMore {
   width: 100%;
   background-color: #f2f2f2;
   font-size: 20px;
   font-weight: 600;
   color: #76B713;
-  // border-radius: 25px;
   border: 2px solid #f2f2f2;
 }
-.loadMore:hover{
-  // background-color: gray;
+
+.loadMore:hover {
   border-color: gray;
 }
-
-
-
