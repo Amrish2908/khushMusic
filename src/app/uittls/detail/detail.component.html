@@ -20,8 +20,6 @@
         </div>
       </div>
     </div>
-
-
     <div *ngFor="let song of songData,let i =index ">
       <table class="table table-striped">
         <tbody>
@@ -50,18 +48,8 @@
     </div>
     <div *ngIf="lastPage == false">
       <button type="button" class="btn loadMore" (click)="getArtistsSong(songId,pageNumber+1)">Load more</button>
-
     </div>
-    <!-- <nav aria-label="...">
-     <ul class="pagination">
-
-       <li class="page-item">
-         <a class="page-link" (click)="getArtistsSong(songId,pageNumber+1)">Next</a>
-       </li>
-     </ul>
-   </nav> -->
   </div>
-
 </div>
 
 
@@ -69,7 +57,6 @@
   <div class="loading" *ngIf="!artistsData&&songData&&songId">
     <app-loader></app-loader>
   </div>
-
   <div *ngIf="artistsData&&songData&&songId" class="main">
     <div class="artistsDetail">
       <div class="imageDiv">
@@ -87,8 +74,6 @@
         </div>
       </div>
     </div>
-
-
     <div *ngFor="let song of songList,let i =index ">
       <table class="table table-striped">
         <tbody>
@@ -117,16 +102,6 @@
     </div>
     <div *ngIf="lastPage == false">
       <button type="button" class="btn loadMore" (click)="getArtistsSong(songId,pageNumber+1)">Load more</button>
-
     </div>
-    <!-- <nav aria-label="...">
-     <ul class="pagination">
-
-       <li class="page-item">
-         <a class="page-link" (click)="getArtistsSong(songId,pageNumber+1)">Next</a>
-       </li>
-     </ul>
-   </nav> -->
   </div>
-
 </div>

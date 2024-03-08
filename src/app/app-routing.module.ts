@@ -10,6 +10,7 @@ import { ChartsComponent } from './components/charts/charts.component';
 import { ArtistComponent } from './components/albums/artist/artist.component';
 import { TrandingComponent } from './components/tranding/tranding.component';
 import { DetailComponent } from './uittls/detail/detail.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'tranding', component: TrandingComponent },
       { path: 'top-artists', component: TopArtistsComponent },
       { path: 'detail', component: DetailComponent },
+      { path: 'search', component: SearchComponent },
     ]
   },
 ];

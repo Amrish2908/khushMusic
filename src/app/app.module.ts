@@ -22,6 +22,7 @@ import { TrandingComponent } from './components/tranding/tranding.component';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { LoaderComponent } from './uittls/loader/loader.component';
 import { LightDarkModeComponent } from './uittls/light-dark-mode/light-dark-mode.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LightDarkModeComponent } from './uittls/light-dark-mode/light-dark-mode
     ArtistComponent,
     TrandingComponent,
     LoaderComponent,
-    LightDarkModeComponent
+    LightDarkModeComponent,
+    SearchComponent
   ],
   imports: [
     HttpClientModule,

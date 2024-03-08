@@ -1,0 +1,78 @@
+<input (input)="onInputChange($event)" placeholder="Type something...">
+
+<div class="">
+  <div class="row">
+    <!-- FOR Songs -->
+    <div class="col-3" *ngIf="songsData.length > 0">
+      <div class="m-2 topTitle">TOP SONG</div>
+      <div class="d-flex m-2 song_container" *ngFor="let data of songsData">
+        <div class="img-container">
+          <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage" [src]="data.image[0].link" alt="img">
+          <div class="play-icon"></div>
+        </div>
+        <div class="text">
+          <div class="title">{{data.title}}</div>
+          <div class="singers">{{data.singers}}</div>
+        </div>
+      </div>
+    </div>
+    <!-- FOR Albums  -->
+    <div class="col-3" *ngIf="albumsData.length > 0">
+      <div class="m-2 topTitle">TOP ALBUMS</div>
+      <div class="d-flex m-2 song_container" *ngFor="let data of albumsData">
+        <div class="img-container">
+          <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage" [src]="data.image[0].link" alt="img">
+          <div class="play-icon"></div>
+        </div>
+        <div class="text">
+          <div class="title">{{data.title}}</div>
+          <div class="singers">{{data.artist}}</div>
+        </div>
+      </div>
+    </div>
+    <!-- FOR Artists -->
+    <div class="col-3" *ngIf="artistsData.length > 0">
+      <div>
+        <div class="m-2 topTitle">TOP ARTISTS</div>
+        <div class="d-flex m-2 song_container" *ngFor="let data of artistsData">
+          <div class="img-container">
+            <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage" [src]="data.image[0].link" alt="img">
+            <div class="play-icon"></div>
+          </div>
+          <div class="text">
+            <div class="title">{{data.title}}</div>
+            <div class="singers">{{data.type}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOR Playlist -->
+    <div class="col-3" *ngIf="playlistsData.length > 0">
+      <div class="m-2 topTitle">PLAYLSTS</div>
+      <div class="d-flex m-2 song_container" *ngFor="let data of playlistsData">
+        <div class="img-container">
+          <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage" [src]="data.image[0].link" alt="img">
+          <div class="play-icon"></div>
+        </div>
+        <div class="text">
+          <div class="title">{{data.title}}</div>
+          <div class="singers">{{data?.type}}</div>
+        </div>
+      </div>
+    </div>
+    <!-- FOR QueryData -->
+    <div class="col-3" *ngIf="topQueryData.length > 0">
+      <div class="m-2 topTitle">TOP QUERY</div>
+      <div class="d-flex m-2 song_container" *ngFor="let data of topQueryData">
+        <div class="img-container">
+          <img style="height: 40px; width: 40px; border-radius: 5px;" class="me-2 songImage" [src]="data.image[0].link" alt="img">
+          <div class="play-icon"></div>
+        </div>
+        <div class="text">
+          <div class="title">{{data.title}}</div>
+          <div class="singers">{{data?.singers}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
